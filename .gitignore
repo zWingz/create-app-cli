@@ -2,8 +2,6 @@ tore
 node_modules/
 npm-debug.log
 selenium-debug.log
-test/unit/coverage
-test/e2e/reports
 config/
 test-build/
 .vscode
@@ -13,4 +11,4 @@ stats.json
 dist/
 stat.json
 yarn-error.log
-
+package-lock.json

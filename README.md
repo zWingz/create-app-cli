@@ -8,7 +8,7 @@
 ### 安装
 ```bash
     git clone git@github.com:zWingz/create-app-cli.git
-    cd cli
+    cd create-app-cli
     npm install
     npm link
 ```
@@ -43,7 +43,7 @@ The short hand repository string to download the repository from:
 ## Examples
 Using http download from Github repository at master.
 ```bash
-create-app init github:path/to/repo myProject
+create-app init path/to/repo myProject
 ```
 
 Using git clone from Bitbucket repository at my-branch.
