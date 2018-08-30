@@ -9,7 +9,6 @@
 ```bash
     npm i @zzwing/create-app -g
 ```
-完成后将会在全局创建命令 create-app
 
 ### 使用
 ```bash
