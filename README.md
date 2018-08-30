@@ -1,4 +1,4 @@
-# 一个Cli
+# create-app cli
     根据vueCli改写,减少部分功能.
     只留下初始化部分
     可以从gitlab/github/本地文件中的项目模板构建新应用
