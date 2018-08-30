@@ -13,8 +13,6 @@ var inquirer = require('inquirer')
 var rm = require('rimraf').sync
 var logger = require('../lib/logger')
 var generate = require('../lib/generate')
-var checkVersion = require('../lib/check-version')
-var warnings = require('../lib/warnings')
 var localPath = require('../lib/local-path')
 
 var isLocalPath = localPath.isLocalPath
@@ -115,25 +113,7 @@ function run() {
             logger.fatal('Local template "%s" not found.', template)
         }
     } else {
-        if (!hasSlash) {
-            // use official templates
-            // var officialTemplate = 'git@git.umlife.net:godzilla/' + template
-            // var officialTemplate = 'https://git.umlife.net:godzilla/' + template + '#develop?private_token=5sPyWJD7SFMEfye42ewY'
-            var officialTemplate = 'vuejs-templates/' + template
-            if (template.indexOf('#') !== -1) {
-                downloadAndGenerate(officialTemplate)
-            } else {
-                if (template.indexOf('-2.0') !== -1) {
-                    warnings.v2SuffixTemplatesDeprecated(template, inPlace ? '' : name)
-                    return
-                }
-
-                // warnings.v2BranchIsNowDefault(template, inPlace ? '' : name)
-                downloadAndGenerate(officialTemplate)
-            }
-        } else {
-            downloadAndGenerate(template)
-        }
+        downloadAndGenerate(template)
     }
 }
 
@@ -145,7 +125,6 @@ function run() {
 
 function downloadAndGenerate(template) {
     var spinner = ora('downloading template -->')
-    console.log('origin url', template)
     spinner.start()
         // Remove if local template exists
         // console.log(template)
