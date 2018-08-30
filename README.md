@@ -7,10 +7,7 @@
 
 ### 安装
 ```bash
-    git clone git@github.com:zWingz/create-app-cli.git
-    cd create-app-cli
-    npm install
-    npm link
+    npm i @zzwing/create-app -g
 ```
 完成后将会在全局创建命令 create-app
 
@@ -19,10 +16,6 @@
     create-app init <template-name> <project-name> [-c]
 ```
 如果需要通过git clone来拉取项目.请使用`-c` 参数
-
-
-### 内部模板
-当前有的模板包括
 
 
 ### 本地文件
