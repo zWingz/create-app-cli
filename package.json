@@ -1,6 +1,6 @@
 {
   "name": "@zzwing/create-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a cli base on vue-cli@2.0",
   "preferGlobal": true,
   "bin": {
