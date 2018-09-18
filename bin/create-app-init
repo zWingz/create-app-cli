@@ -57,7 +57,6 @@ help()
 /**
  * Settings.
  */
-console.log(program.args)
 var template = program.args[0]
 var hasSlash = template.indexOf('/') > -1
 var rawName = program.args[1]
@@ -124,7 +123,7 @@ function run() {
  */
 
 function downloadAndGenerate(template) {
-    var spinner = ora('downloading template -->')
+    var spinner = ora('downloading template -->', template)
     spinner.start()
         // Remove if local template exists
         // console.log(template)
